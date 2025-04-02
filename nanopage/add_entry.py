@@ -33,6 +33,7 @@ def data_from_demozoo(pid: str) -> dict:
         "url": data["demozoo_url"],
         "download_link": download_link or None,
         "other_links": data["external_links"],
+        "tags": data["tags"],
     }
 
 
@@ -47,3 +48,13 @@ def add_entry(category: str, flavor: str, demozoo_id: str):
     filename = f'{data["id"]}_{slugify(data["title"])}.json'
     filepath = path / Path(filename)
     json.dump(data, codecs.open(filepath, "w", "UTF-8"))
+
+
+def __update():
+    import glob
+    for g in glob.glob("public/data/**/**/*"):
+        print(g)
+        with codecs.open(g,'r','UTF-8') as f:
+            data = json.load(f)
+            if 'demozoo' in data["url"]:
+                add_entry(data["category"], data["flavor"], data["id"])

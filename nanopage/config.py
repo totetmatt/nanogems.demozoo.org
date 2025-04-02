@@ -31,8 +31,38 @@ CATEGORIES = [
     {"id": "32_byte_intros", "label": "32B intros"},
     {"id": "16_byte_intros", "label": "16B intros"},
     {"id": "8_byte_intros", "label": "8B intros"},
-    {"id": "tweet", "label": "Tweet"},
     {"id": "tiny_executable_graphics", "label": "Tiny executable graphics"},
+]
+
+DISPLAY_TAGS = [
+    "textmode",
+    "header-excluded",
+    "tiny-intro-with-sound",
+    "code-challenge",
+    "chessboard",
+    "glitch",
+    "xor-pattern",
+    "fractal",
+    "floorcasting",
+    "tunnel",
+    "raycasting",
+    "raymarching",
+    "raytracing",
+    "checkerboard",
+    "sierpinski",
+    "automata",
+    "fire-effect",
+    "matrix-effect",
+    "xor-pattern",
+    "twister",
+    "noise",
+    "rotozoomer",
+    "vectors",
+    "midi",
+    "bytebeat",
+    "plasma",
+    "sine-dots",
+    "metaballs"
 ]
 
 

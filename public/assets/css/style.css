@@ -7,6 +7,10 @@
   src: url("/assets/css/font/Zector.otf") format("opentype");
 }
 @font-face {
+  font-family: Bebas;
+  src: url("/assets/css/font/BebasNeue Regular.otf") format("opentype");
+}
+@font-face {
   font-family: Cuyabra;
   font-weight: bold;
   src: url("/assets/css/font/cuyabra bold.otf") format("opentype");
@@ -17,7 +21,7 @@
 }
  html{
   scroll-behavior: smooth;
-  font-family: Cuyabra;
+  font-family: Bebas;
   
  }
 
@@ -122,6 +126,7 @@
     text-align: center;
    
     font-weight: lighter;
+    z-index: 10;
   }
    .banner-mini {
     scroll-margin-top: 50px;
@@ -136,6 +141,7 @@
     width: 80%;
     margin-bottom: 2em;
     display: table;
+    z-index: 10;
   }
    .banner-mini-head {
     display: table-cell;
@@ -194,7 +200,7 @@
     color: #1f1f1f;
     max-height: 3em;
     text-align: center;
-    font-family: Cuyabra;
+    font-family: Bebas;
     font-weight:bolder;
     padding: 1px;
   }
@@ -203,7 +209,7 @@
     
     font-size: 2.1em;
     font-weight:bolder;
-    letter-spacing: -4px;
+    letter-spacing: -1px;
   }
   
  
@@ -224,15 +230,17 @@
     border:0px;
     min-height: 9.5em;
     max-height: 9.5em;
-    letter-spacing: -1px;;
+    letter-spacing: -0px;;
     transition: width .25s, height .25s,min-height .25s, max-height .25s;
-    font-family: Zector;
+    font-family: Bebas;
+   
   }
+ 
 
   .category-table-list li:hover {
     padding: 0.8em 0;
     background: #171717;
-    color:rgb(87, 204, 248);
+    color:#57ccf8;
     border:0px;
     min-height: 20em;
     max-height: 20em;
@@ -304,13 +312,41 @@
   }
   
 
-.button-secondary {
+a.button-secondary {
   border-radius: 14px;
   text-shadow: 2 2px 2px #111;
    background-color: rgb(1, 115, 180);
   color: #eeeeee;
   font-size: 100%;
-  font-family: Zector;
+ 
+  font-family: Bebas;
+  letter-spacing: 50px;
 
-  letter-spacing: -4px;
 }
+.entry-container {
+  position: relative;
+  text-align: center;
+}
+.tags {
+  position: absolute;
+  top: 0px;
+  left: 63px;
+  background-color: #111111EE;
+  transition: top .25s, left .25s, font-size .25s;
+  font-size: .8em;
+}
+.category-table-list li:hover  .tags {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  background-color: #111111EE;
+  font-size: 1em;
+}
+.tag0 {
+  color: #F76F8E;
+}
+
+.tag1 {
+  color: #F9BAC9;
+}
+

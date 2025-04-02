@@ -1,8 +1,8 @@
 import argparse
 import config
 
-from add_entry import add_entry
-from generate import generate_html
+from add_entry import add_entry, __update
+from generate import freezer
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="nanopage")
@@ -24,8 +24,11 @@ if __name__ == "__main__":
 
     parser_add = subparsers.add_parser("generate", help="Generate HTML")
 
+    parser_update = subparsers.add_parser("update", help="Regenerate json from demozoo")
     args = parser.parse_args()
     if args.command == "add_entry":
         add_entry(args.category, args.flavor, args.demozoo_id)
+    if args.command == "update":
+        __update()
     elif args.command == "generate":
-        generate_html()
+        freezer.freeze()
